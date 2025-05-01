@@ -1,0 +1,41 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /local_logs/spring-app.log
+    fields:
+      service: todo-app
+      environment: demo
+
+# Process and enhance logs (without Docker metadata)
+processors:
+  - add_host_metadata: ~
+  - add_process_metadata:
+      match_pids: ["process.pid"]
+  - decode_json_fields:
+      fields: ["message"]
+      target: "json"
+      overwrite_keys: true
+      process_array: false
+      max_depth: 1
+      add_error_key: true
+
+# Output logs to console and Elasticsearch (if enabled)
+output.console:
+  enabled: true
+  pretty: true
+
+# Uncomment for Elasticsearch output
+#output.elasticsearch:
+#  hosts: ["elasticsearch:9200"]
+#  indices:
+#    - index: "todo-app-%{+yyyy.MM.dd}"
+
+# Filebeat internal logging
+logging.level: info
+logging.to_files: true
+logging.files:
+  path: /var/log/filebeat
+  name: filebeat
+  keepfiles: 7
+  permissions: 0644

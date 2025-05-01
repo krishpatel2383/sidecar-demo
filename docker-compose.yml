@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  # Main application service
+  todo-service:
+    build: ./todo-service
+    container_name: todo-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./local_logs:/app/logs  # Mount to a local directory
+    environment:
+      - LOGGING_FILE_PATH=/app/logs/spring-app.log
+
+  # Sidecar service for log processing
+  sidecar:
+    build: ./sidecar
+    container_name: logging-sidecar
+    volumes:
+      - logs:/logs:ro  # Mount the shared logs volume as read-only
+      - ./local_sidecar_logs:/var/log/filebeat  # Mount the filebeat logs directory to a local directory
+    # Depends on main service to ensure proper startup sequence
+    depends_on:
+      - todo-service
+
+volumes:
+  logs:  # Define a shared volume for logs

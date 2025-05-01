@@ -1,0 +1,52 @@
+2025-05-01 17:57:45 - INFO - com.sidecar.demo.DemoApplication - Starting DemoApplication v0.0.1-SNAPSHOT using Java 21.0.7 with PID 1 (/app/app.jar started by root in /app)
+2025-05-01 17:57:45 - INFO - com.sidecar.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-01 17:57:46 - INFO - org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-01 17:57:46 - INFO - org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-01 17:57:46 - INFO - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-01 17:57:47 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 7 mappings in 'requestMappingHandlerMapping'
+2025-05-01 17:57:47 - DEBUG - org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-05-01 17:57:47 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-01 17:57:47 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-01 17:57:47 - INFO - com.sidecar.demo.DemoApplication - Started DemoApplication in 2.562 seconds (process running for 3.36)
+2025-05-01 17:58:13 - INFO - org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-01 17:58:13 - INFO - org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-01 17:58:13 - DEBUG - org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-05-01 17:58:13 - DEBUG - org.springframework.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-05-01 17:58:13 - DEBUG - org.springframework.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-05-01 17:58:13 - DEBUG - org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3393ae9e
+2025-05-01 17:58:13 - DEBUG - org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@cd33220
+2025-05-01 17:58:13 - DEBUG - org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-01 17:58:13 - INFO - org.springframework.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2025-05-01 17:58:13 - DEBUG - org.springframework.web.servlet.DispatcherServlet - GET "/api/todos", parameters={}
+2025-05-01 17:58:13 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.sidecar.demo.controller.TodoController#getAllTodos()
+2025-05-01 17:58:13 - INFO - com.sidecar.demo.controller.TodoController - Getting all todo items
+2025-05-01 17:58:13 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2025-05-01 17:58:13 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [[]]
+2025-05-01 17:58:13 - DEBUG - org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-01 18:05:47 - DEBUG - org.springframework.web.servlet.DispatcherServlet - POST "/api/todos", parameters={}
+2025-05-01 18:05:47 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.sidecar.demo.controller.TodoController#createTodo(TodoItem)
+2025-05-01 18:05:47 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [TodoItem(id=null, task=Test new todo 2, completed=false)]
+2025-05-01 18:05:47 - INFO - com.sidecar.demo.controller.TodoController - Created new todo item with ID: 1
+2025-05-01 18:05:47 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-01 18:05:47 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [TodoItem(id=1, task=Test new todo 2, completed=false)]
+2025-05-01 18:05:47 - DEBUG - org.springframework.web.servlet.DispatcherServlet - Completed 201 CREATED
+2025-05-01 18:05:49 - DEBUG - org.springframework.web.servlet.DispatcherServlet - POST "/api/todos", parameters={}
+2025-05-01 18:05:49 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.sidecar.demo.controller.TodoController#createTodo(TodoItem)
+2025-05-01 18:05:49 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [TodoItem(id=null, task=Test new todo 2, completed=false)]
+2025-05-01 18:05:49 - INFO - com.sidecar.demo.controller.TodoController - Created new todo item with ID: 2
+2025-05-01 18:05:49 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-01 18:05:49 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [TodoItem(id=2, task=Test new todo 2, completed=false)]
+2025-05-01 18:05:49 - DEBUG - org.springframework.web.servlet.DispatcherServlet - Completed 201 CREATED
+2025-05-01 18:05:53 - DEBUG - org.springframework.web.servlet.DispatcherServlet - POST "/api/todos", parameters={}
+2025-05-01 18:05:53 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.sidecar.demo.controller.TodoController#createTodo(TodoItem)
+2025-05-01 18:05:53 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [TodoItem(id=null, task=Test new todo 3, completed=false)]
+2025-05-01 18:05:53 - INFO - com.sidecar.demo.controller.TodoController - Created new todo item with ID: 3
+2025-05-01 18:05:53 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-01 18:05:53 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [TodoItem(id=3, task=Test new todo 3, completed=false)]
+2025-05-01 18:05:53 - DEBUG - org.springframework.web.servlet.DispatcherServlet - Completed 201 CREATED
+2025-05-01 18:06:00 - DEBUG - org.springframework.web.servlet.DispatcherServlet - GET "/api/todos", parameters={}
+2025-05-01 18:06:00 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.sidecar.demo.controller.TodoController#getAllTodos()
+2025-05-01 18:06:00 - INFO - com.sidecar.demo.controller.TodoController - Getting all todo items
+2025-05-01 18:06:00 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2025-05-01 18:06:00 - DEBUG - org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [[TodoItem(id=1, task=Test new todo 2, completed=false), TodoItem(id=2, task=Test new todo 2, complet (truncated)...]
+2025-05-01 18:06:00 - DEBUG - org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
